@@ -48,6 +48,38 @@ jogo("Gunpoint", A, B) :-
     (graficos(1); graficos(3)), (tempo(2); tempo(3)),(desafio(1); desafio(2)),
     portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(2)).
 
+jogo("Final Fantasy XII", A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Final Fantasy XII",A,B).
+jogo("The Binding of Isaac", A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("The Binding of Isaac",A,B).
+jogo("BattleBlock Theater", A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("BattleBlock Theater",A,B).
+jogo("Risk of Rain", A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Risk of Rain",A,B).
+jogo("Skullgirls", A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Skullgirls",A,B).	
+jogo("Half-Life", A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Half-Life",A,B).
+jogo("Pokemon Emerald", A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Pokemon Emerald",A,B).
+jogo("Doki Doki Literature Club", A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Doki Doki Literature Club",A,B).
+jogo("Megaman X2", A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Megaman X2",A,B).
+jogo("Cuphead", A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Cuphead",A,B).
+
+	
 jogo(X,A,B) :-
     B = A,!.
 
