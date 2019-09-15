@@ -1,16 +1,33 @@
 main :- nl, write('Sistema Especialista em recomendação de jogos para leigos.'), nl,
     retractall(fato(_, _)),     % limpa a memória de trabalho.
-    jogo("Yoshi Island",[],B),jogo("Mortal Kombat",B,C),
+    jogo("Yoshi Island",[],B),jogo("Mortal Kombat",B,C),jogo("Hollow Night",C,D),
     write('As recomendações de jogos são: '),
-    write(C), nl.
+    write(D), nl.
 
 % ------------------------------------------------------------------
 % Jogos
 % ------------------------------------------------------------------
 jogo("Yoshi Island",A,B) :-
-    coop(1), listIni("Yoshi Island",A,B).
+    (coop(1); coop(3)), listIni("Yoshi Island",A,B).
 jogo("Mortal Kombat",A,B) :-
-    coop(1), family(2),listIni("Mortal Kombat",A,B).
+    (coop(1); coop(3)), family(2),listIni("Mortal Kombat",A,B).
+jogo("Hollow Night", A, B) :-
+    (coop(1); coop(2)),(graficos(1); graficos(3)),(desafio(1);desafio(3)),
+    (historia(1); historia(3)), (tempo(1);tempo(3)), (criativo(1); criativo(2)),
+    portatil(2), (esportes(1); esportes(2)), (simulador(1);simulador(2))
+    ,listIni("Hollow Night",A,B).
+jogo("Dark Souls", A, B) :-
+    (graficos(2); graficos(3)), (tempo(1); tempo(3)), (criativo(1); criativo(2)),
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), family(2).
+jogo("Starbound", A, B) :-
+    (graficos(1); graficos(3)), (tempo(1); tempo(3)), (desafio(1); desafio(3)),
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)).
+jogo("Stardew Valley", A, B) :-
+    (graficos(1); graficos(3)), (tempo(1); tempo(3)),(desafio(1); desafio(2)),
+    portatil(2), (esportes(1); esportes(2)), (simulador(2); simulador(3)).
+jogo("Bastion", A, B) :-
+    (graficos(1); graficos(3)), (tempo(1); tempo(2)),
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)).
 jogo(X,A,B) :-
     B = A,!.
 
@@ -27,16 +44,16 @@ graficos(A) :-
     pergunte(graficos, X, "Prefere que tipos de graficos, 2D ou 3D ?\n1-2D\n2-3D\n3-Os dois\n"), A = X.
 desafio(A) :-
     pergunte(desafio, X, "Gosta de desafio ?\n1-sim\n2-nao\n3-Só quero jogos que sejam desafiadores\n"), A = X.
-creativo(A) :-
-    pergunte(creativo, X, "Você é uma pessoa criativa ?\n1-sim\n2-nao\n3- Só quero jogos que estimulem minha criatividade\n"), A = X.
+criativo(A) :-
+    pergunte(criativo, X, "Você é uma pessoa criativa ?\n1-sim\n2-nao\n3- Só quero jogos que estimulem minha criatividade\n"), A = X.
 family(A) :-
     pergunte(family, X, "Você deseja jogos com temas pesados, ou jogos para familia ?\n1-Familiar\n2-Tanto faz\n"), A = X.
 portatil(A) :-
     pergunte(portatil, X, "Você deseja poder jogar de forma portatil(celular ou portateis) ?\n1-Só jogos portateis\n2-Tanto faz\n"), A = X.
 esportes(A) :-
     pergunte(esportes, X, "Você gosta de esportes ?\n1-Sim\n2-nao\n3-Só quero jogos de esportes\n"), A = X.
-simlador(A) :-
-    pergunte(simulador, A, "Você gosta de simluadores (jogos que simulam alguma atividade) ? (sim, nao)").
+simulador(A) :-
+    pergunte(simulador, X, "Você gosta de simluadores (jogos que simulam alguma atividade) ?\n1-sim\n2-nao\n3-Só quero jogos que são simlutadores\n"), A = X.
 
 % ------------------------------------------------------------------
 % Regras de interação com o Usuário - Baixo nível

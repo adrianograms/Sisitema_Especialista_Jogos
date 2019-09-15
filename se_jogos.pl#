@@ -24,13 +24,13 @@ jogo("Starbound", A, B) :-
     portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)).
 jogo("Stardew Valley", A, B) :-
     (graficos(1); graficos(3)), (tempo(1); tempo(3)),(desafio(1); desafio(2)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(2); simulador(3)).
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(3)).
 jogo("Bastion", A, B) :-
     (graficos(1); graficos(3)), (tempo(1); tempo(2)), (coop(1); coop(2)),
     portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)).
 jogo("Broforce", A, B) :-
     (graficos(1); graficos(3)), (tempo(1); tempo(2)),(desafio(1); desafio(3)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(2); simulador(3)).
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(3)).
 
 jogo(X,A,B) :-
     B = A,!.
