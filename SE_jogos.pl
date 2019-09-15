@@ -12,28 +12,103 @@ jogo("Yoshi Island",A,B) :-
 jogo("Mortal Kombat",A,B) :-
     (coop(1); coop(3)), family(2),listIni("Mortal Kombat",A,B).
 jogo("Hollow Night", A, B) :-
-    (coop(1); coop(2)),(graficos(1); graficos(3)),(desafio(1);desafio(3)),
-    (historia(1); historia(3)), (tempo(1);tempo(3)), (criativo(1); criativo(2)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1);simulador(2))
-    ,listIni("Hollow Night",A,B).
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
 jogo("Dark Souls", A, B) :-
-    (graficos(2); graficos(3)), (tempo(1); tempo(3)), (criativo(1); criativo(2)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), family(2).
+    temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Dark Souls",A,B).
 jogo("Starbound", A, B) :-
-    (graficos(1); graficos(3)), (tempo(1); tempo(3)), (desafio(1); desafio(3)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)).
+    temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Starbound",A,B).
 jogo("Stardew Valley", A, B) :-
     (graficos(1); graficos(3)), (tempo(1); tempo(3)),(desafio(1); desafio(2)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(2); simulador(3)).
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(3)).
 jogo("Bastion", A, B) :-
     (graficos(1); graficos(3)), (tempo(1); tempo(2)), (coop(1); coop(2)),
     portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)).
 jogo("Broforce", A, B) :-
     (graficos(1); graficos(3)), (tempo(1); tempo(2)),(desafio(1); desafio(3)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(2); simulador(3)).
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(3)).
+jogo("Fable", A, B) :-
+    (graficos(2); graficos(3)), (tempo(1); tempo(3)),(desafio(1); desafio(2)),
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(2)).
+jogo("Full Mojo Rampage", A, B) :-
+    (graficos(2); graficos(3)), (tempo(2); tempo(3)),(desafio(1); desafio(3)),
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(3)).
+jogo("Furi", A, B) :-
+    (graficos(1); graficos(3)), (tempo(2); tempo(3)),(desafio(1); desafio(3)),
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(2)).
+jogo("Gauntlet", A, B) :-
+    (graficos(1); graficos(3)), (tempo(2); tempo(3)),(desafio(1); desafio(3)),
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(3)).
+jogo("GIBZ", A, B) :-
+    (graficos(1); graficos(3)), (tempo(2); tempo(3)),(desafio(1); desafio(2)),
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(3)).
+jogo("Gunpoint", A, B) :-
+    (graficos(1); graficos(3)), (tempo(2); tempo(3)),(desafio(1); desafio(2)),
+    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(2)).
 
 jogo(X,A,B) :-
     B = A,!.
+
+
+temCoop("sim") :-
+    !. % Possui coop mas não é requisito, o jogo pode ser jogado sozinho
+temCoop("nao") :-
+    coop(1); coop(2).
+temCoop("exclusivo") :-
+    coop(1) ; coop(3). % Possui coop, e ele é excluisivamente coop ou a graça do jogo é jogar com os amigos
+
+temHistoria("sim") :-
+    !. % Possui historia, mas você pode ignorar
+temHistoria("nao") :-
+    historia(1); historia(2).
+temHistoria("central") :-
+    historia(1); historia(3). % Possui historia, e ela é muito importante para a graça do jogo
+
+tempoJogatina("longa") :-
+    tempo(1); tempo(3).
+tempoJogatina("curta") :-
+    tempo(2); tempo(3).
+
+tipoGraficos("2d") :-
+    graficos(1); graficos(3).
+tipoGraficos("3d") :-
+    graficos(2); graficos(3).
+
+eDificil("sim") :-
+    desafio(1); desafio(3).
+eDificil("nao") :-
+    desafio(1); desafio(2).
+
+eCriativo("sim") :-
+    criativo(1) ; criativo(3).
+eCriativo("nao") :-
+    criativo(1) ; criativo(2).
+
+eFamily("sim") :-
+    !.
+eFamily("nao") :-
+    family(2).
+
+ePortatil("sim") :-
+    !.
+ePortatil("nao") :-
+    portatil(2).
+
+eDeEsportes("sim") :-
+    esportes(1); esportes(3).
+eDeEsportes("nao") :-
+    esportes(1); esportes(2).
+
+eSimulador("sim") :-
+    simulador(1); simulador(3).
+eSimulador("nao") :-
+    simulador(1); simulador(2).
+
+
+
+
 
 % ------------------------------------------------------------------
 % Regras de interação com o Usuário - Alto nível
