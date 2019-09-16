@@ -18,35 +18,35 @@ jogo("Dark Souls", A, B) :-
     temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Dark Souls",A,B).
 jogo("Starbound", A, B) :-
-    temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Starbound",A,B).
+    temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Starbound",A,B).
 jogo("Stardew Valley", A, B) :-
-    (graficos(1); graficos(3)), (tempo(1); tempo(3)),(desafio(1); desafio(2)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(3)).
+    temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Stardew Valley",A,B).
 jogo("Bastion", A, B) :-
-    (graficos(1); graficos(3)), (tempo(1); tempo(2)), (coop(1); coop(2)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)).
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Bastion",A,B).
 jogo("Broforce", A, B) :-
-    (graficos(1); graficos(3)), (tempo(1); tempo(2)),(desafio(1); desafio(3)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(3)).
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Broforce",A,B).
 jogo("Fable", A, B) :-
-    (graficos(2); graficos(3)), (tempo(1); tempo(3)),(desafio(1); desafio(2)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(2)).
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Fable",A,B).
 jogo("Full Mojo Rampage", A, B) :-
-    (graficos(2); graficos(3)), (tempo(2); tempo(3)),(desafio(1); desafio(3)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(3)).
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Full Mojo Rampage",A,B).
 jogo("Furi", A, B) :-
-    (graficos(1); graficos(3)), (tempo(2); tempo(3)),(desafio(1); desafio(3)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(2)).
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("3d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Furi",A,B).
 jogo("Gauntlet", A, B) :-
-    (graficos(1); graficos(3)), (tempo(2); tempo(3)),(desafio(1); desafio(3)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(3)).
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Gauntlet",A,B).
 jogo("GIBZ", A, B) :-
-    (graficos(1); graficos(3)), (tempo(2); tempo(3)),(desafio(1); desafio(2)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(3)).
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("GIBZ",A,B).
 jogo("Gunpoint", A, B) :-
-    (graficos(1); graficos(3)), (tempo(2); tempo(3)),(desafio(1); desafio(2)),
-    portatil(2), (esportes(1); esportes(2)), (simulador(1); simulador(2)), (coop(1); coop(2)).
+     temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Gunpoint",A,B).
 
 jogo("Final Fantasy XII", A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
@@ -62,7 +62,7 @@ jogo("Risk of Rain", A, B) :-
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Risk of Rain",A,B).
 jogo("Skullgirls", A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Skullgirls",A,B).	
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Skullgirls",A,B).
 jogo("Half-Life", A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Half-Life",A,B).
@@ -70,7 +70,7 @@ jogo("Pokemon Emerald", A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Pokemon Emerald",A,B).
 jogo("Doki Doki Literature Club", A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
+    temCoop("nao"),temHistoria("central"),tempoJogatina("longa"),tipoGraficos("2d"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Doki Doki Literature Club",A,B).
 jogo("Megaman X2", A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
@@ -79,7 +79,7 @@ jogo("Cuphead", A, B) :-
     temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Cuphead",A,B).
 
-	
+
 jogo(X,A,B) :-
     B = A,!.
 
