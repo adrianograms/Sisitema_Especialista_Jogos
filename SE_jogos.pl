@@ -83,20 +83,25 @@ jogo("Cuphead", A, B) :-
 jogo(X,A,B) :-
     B = A,!.
 
+% ------------------------------------------------------------------
+% Regras de negocio, interface das perguntas com o jogo
+% ------------------------------------------------------------------
 
 temCoop("sim") :-
     !. % Possui coop mas não é requisito, o jogo pode ser jogado sozinho
 temCoop("nao") :-
-    coop(1); coop(2).
+    coop(1); coop(2). % Não tem coop
 temCoop("exclusivo") :-
     coop(1) ; coop(3). % Possui coop, e ele é excluisivamente coop ou a graça do jogo é jogar com os amigos
 
-temHistoria("sim") :-
-    !. % Possui historia, mas você pode ignorar
+temHistoria("sim","nao") :-
+    temLeitura("nao"). % Possui historia, mas você pode ignorar, e não tem muita leitura
+temHistoria("sim","sim") :-
+    temLeitura("sim"). % Possui historia, mas você pode ignorar, e tem consideravel leitura, porem voce pode ignorar tambem
 temHistoria("nao") :-
-    historia(1); historia(2).
+    historia(1); historia(2). % Não possui historia, ou a qualidade da mesma é ruim
 temHistoria("central") :-
-    historia(1); historia(3). % Possui historia, e ela é muito importante para a graça do jogo
+    (historia(1); historia(3)),temLeitura("crucial"). % Possui historia, e ela é muito importante para a graça do jogo
 
 tempoJogatina("longa") :-
     tempo(1); tempo(3).
@@ -138,15 +143,25 @@ eSimulador("sim") :-
 eSimulador("nao") :-
     simulador(1); simulador(2).
 
+temLeitura("sim") :-
+    !. % Tem leitura, mas pode ser ignorada
+temLeitura("nao") :-
+    leitura(1); leitura(2). % Não tem leitura mesmo tendo historia
+temLeitura("crucial") :-
+    leitura(1); leitura(3). % Leitura é crucial para o entendimento/divertimento do jogador
 
-
-
+tipoJogo("motor") :-
+    tipo(1); tipo(3). % Jogos de reflexos
+tipoJogo("raciocinio") :-
+    tipo(2); tipo(3). % Jogos de raciocinio
+tipoJogo("ind") :-
+    !. % Jogos ind(indefinidos) são jogos dificeis de categorizar e que seram recomendados para todos
 
 % ------------------------------------------------------------------
 % Regras de interação com o Usuário - Alto nível
 % ------------------------------------------------------------------
 coop(A) :-
-    pergunte(coop, X , "Você gosta de jogar com os amigos (localmente) ?\n1-sim\n2-nao\n3-Só quero jogos com coop\n"), A = X.
+    pergunte(coop, X , "Você gosta de jogar com os amigos (localmente ou/e online) ?\n1-sim\n2-nao\n3-Só quero jogos com coop\n"), A = X.
 historia(A) :-
     pergunte(historia, X, "Você se importa com historia no jogo em que está jogando ?\n1-sim\n2-nao\n3- Só quero jogos com foco/boa historia\n"), A = X.
 tempo(A) :-
@@ -165,6 +180,10 @@ esportes(A) :-
     pergunte(esportes, X, "Você gosta de esportes ?\n1-Sim\n2-nao\n3-Só quero jogos de esportes\n"), A = X.
 simulador(A) :-
     pergunte(simulador, X, "Você gosta de simluadores (jogos que simulam alguma atividade) ?\n1-sim\n2-nao\n3-Só quero jogos que são simlutadores\n"), A = X.
+leitura(A) :-
+    pergunte(leitura, X, "Você gosta de ler ?\n1-Sim\n2-Não\n3-Sim e gostaria que os jogos recomendados tivesse bastante leitura\n"), A = X.
+tipo(A) :-
+    pergunte(tipo, X, "Você gostaria de jogos focados em suas habilidades motoras e reflexos, e/ou jogos que desafiem/estimulem sua mente/raciocinio ?\n1-Reflexos\n2-Raciocinio\n3-Ambos\n"), A = X.
 
 % ------------------------------------------------------------------
 % Regras de interação com o Usuário - Baixo nível

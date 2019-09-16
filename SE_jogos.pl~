@@ -70,7 +70,7 @@ jogo("Pokemon Emerald", A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Pokemon Emerald",A,B).
 jogo("Doki Doki Literature Club", A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
+    temCoop("nao"),temHistoria("central"),tempoJogatina("longa"),tipoGraficos("2d"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Doki Doki Literature Club",A,B).
 jogo("Megaman X2", A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
@@ -87,16 +87,18 @@ jogo(X,A,B) :-
 temCoop("sim") :-
     !. % Possui coop mas não é requisito, o jogo pode ser jogado sozinho
 temCoop("nao") :-
-    coop(1); coop(2).
+    coop(1); coop(2). % Não tem coop
 temCoop("exclusivo") :-
     coop(1) ; coop(3). % Possui coop, e ele é excluisivamente coop ou a graça do jogo é jogar com os amigos
 
-temHistoria("sim") :-
-    !. % Possui historia, mas você pode ignorar
+temHistoria("sim","nao") :-
+    temLeitura("nao"). % Possui historia, mas você pode ignorar, e não tem muita leitura
+temHistoria("sim","sim") :-
+    temLeitura("sim"). % Possui historia, mas você pode ignorar, e tem consideravel leitura, porem voce pode ignorar tambem
 temHistoria("nao") :-
-    historia(1); historia(2).
+    historia(1); historia(2). % Não possui historia, ou a qualidade da mesma é ruim
 temHistoria("central") :-
-    historia(1); historia(3). % Possui historia, e ela é muito importante para a graça do jogo
+    (historia(1); historia(3)),temLeitura("crucial"). % Possui historia, e ela é muito importante para a graça do jogo
 
 tempoJogatina("longa") :-
     tempo(1); tempo(3).
@@ -138,15 +140,23 @@ eSimulador("sim") :-
 eSimulador("nao") :-
     simulador(1); simulador(2).
 
+temLeitura("sim") :-
+    !.
+temLeitura("nao") :-
+    leitura(1); leitura(2).
+temLeitura("crucial") :-
+    leitura(1); leitura(3).
 
-
-
+tipoJogo("motor") :-
+    tipo(1); tipo(3).
+tipoJogo("raciocinio") :-
+    tipo(2); tipo(3).
 
 % ------------------------------------------------------------------
 % Regras de interação com o Usuário - Alto nível
 % ------------------------------------------------------------------
 coop(A) :-
-    pergunte(coop, X , "Você gosta de jogar com os amigos (localmente) ?\n1-sim\n2-nao\n3-Só quero jogos com coop\n"), A = X.
+    pergunte(coop, X , "Você gosta de jogar com os amigos (localmente ou/e online) ?\n1-sim\n2-nao\n3-Só quero jogos com coop\n"), A = X.
 historia(A) :-
     pergunte(historia, X, "Você se importa com historia no jogo em que está jogando ?\n1-sim\n2-nao\n3- Só quero jogos com foco/boa historia\n"), A = X.
 tempo(A) :-
@@ -165,6 +175,10 @@ esportes(A) :-
     pergunte(esportes, X, "Você gosta de esportes ?\n1-Sim\n2-nao\n3-Só quero jogos de esportes\n"), A = X.
 simulador(A) :-
     pergunte(simulador, X, "Você gosta de simluadores (jogos que simulam alguma atividade) ?\n1-sim\n2-nao\n3-Só quero jogos que são simlutadores\n"), A = X.
+leitura(A) :-
+    pergunte(leitura, X, "Você gosta de ler ?\n1-Sim\n2-Não\n3-Sim e gostaria que os jogos recomendados tivesse bastante leitura\n"), A = X.
+tipo(A) :-
+    pergunte(tipo, X, "Você gostaria de jogos focados em suas habilidades motoras e reflexos, e/ou jogos que desafiem/estimulem sua mente/raciocinio ?\n1-Reflexos\n2-Raciocinio\n3-Ambos\n"), A = X.
 
 % ------------------------------------------------------------------
 % Regras de interação com o Usuário - Baixo nível
