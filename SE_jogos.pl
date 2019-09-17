@@ -1,79 +1,88 @@
 main :- nl, write('Sistema Especialista em recomendação de jogos para leigos.'), nl,
     retractall(fato(_, _)),     % limpa a memória de trabalho.
-    jogo("Yoshi Island",[],B),jogo("Mortal Kombat",B,C),jogo("Hollow Night",C,D),
+    jogos(A),
     write('As recomendações de jogos são: '),
-    write(D), nl.
+    write(A), nl.
 
 % ------------------------------------------------------------------
 % Jogos
 % ------------------------------------------------------------------
-jogo("Yoshi Island",A,B) :-
-    (coop(1); coop(3)), listIni("Yoshi Island",A,B).
-jogo("Mortal Kombat",A,B) :-
-    (coop(1); coop(3)), family(2),listIni("Mortal Kombat",A,B).
-jogo("Hollow Night", A, B) :-
+jogo(1, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
-jogo("Dark Souls", A, B) :-
+jogo(2, A, B) :-
     temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Dark Souls",A,B).
-jogo("Starbound", A, B) :-
+jogo(3, A, B) :-
     temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Starbound",A,B).
-jogo("Stardew Valley", A, B) :-
+jogo(4, A, B) :-
     temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("ind"),
     eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Stardew Valley",A,B).
-jogo("Bastion", A, B) :-
+jogo(5, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Bastion",A,B).
-jogo("Broforce", A, B) :-
+jogo(6, A, B) :-
     temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Broforce",A,B).
-jogo("Fable", A, B) :-
+jogo(7, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("motor"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Fable",A,B).
-jogo("Full Mojo Rampage", A, B) :-
-    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
+jogo(8, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Full Mojo Rampage",A,B).
-jogo("Furi", A, B) :-
+jogo(9, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Furi",A,B).
-jogo("Gauntlet", A, B) :-
+jogo(10, A, B) :-
     temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Gauntlet",A,B).
-jogo("GIBZ", A, B) :-
+jogo(11, A, B) :-
     temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("GIBZ",A,B).
-jogo("Gunpoint", A, B) :-
+jogo(12, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Gunpoint",A,B).
-jogo("The Room", A, B) :-
+jogo(13, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("raciocinio"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("The Room",A,B).
-jogo("Scribblenauts Unlimited", A, B) :-
+jogo(14, A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
     eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Scribblenauts Unlimited",A,B).
-jogo("Shantae and the Pirate's Curse", A, B) :-
+jogo(15, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Shantae and the Pirate's Curse",A,B).
-jogo("Shelter 1", A, B) :-
+jogo(16, A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("ind"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Shelter 1",A,B).
-jogo("Tales of Berseria", A, B) :-
+jogo(17, A, B) :-
     temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Tales of Berseria",A,B).
-jogo("Trine 2", A, B) :-
+jogo(18, A, B) :-
     temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
     eDificil("sim"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Trine 2",A,B).
-jogo("FEZ", A, B) :-
+jogo(19, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("FEZ",A,B).
-jogo("The Witness", A, B) :-
+jogo(20, A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("raciocinio"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("The Witness",A,B).
-jogo("Age of Empires 2", A, B) :-
+jogo(21, A, B) :-
     temCoop("sim"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("raciocinio"),
     eDificil("sim"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Age of Empires 2",A,B).
+jogo(22, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Aragami",A,B).
+jogo(23, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("BEEP",A,B).
+jogo(24, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Car Mechanic Simulator 2015",A,B).
+jogo(25, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("sim"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Skate 3",A,B).
+
 
 jogo("Final Fantasy XII", A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
@@ -109,6 +118,10 @@ jogo("Cuphead", A, B) :-
 
 jogo(X,A,B) :-
     B = A,!.
+
+jogos(A) :- jogo(1, [], B), jogo(2, B, C), jogo(3, C, D), jogo(4, D, E),
+    jogo(5, E, F), jogo(6, F, G), jogo(7, G, H), jogo(8, H, A).
+
 
 % ------------------------------------------------------------------
 % Regras de negocio, interface das perguntas com o jogo
@@ -186,27 +199,27 @@ tipoJogo("ind") :-
 % Regras de interação com o Usuário - Alto nível
 % ------------------------------------------------------------------
 coop(A) :-
-    pergunte(coop, X , "Você gosta de jogar com os amigos (localmente ou/e online) ?\n1-sim\n2-nao\n3-Só quero jogos com coop\n"), A = X.
+    pergunte(coop, X , "Você gosta de jogar com os amigos (localmente ou/e online) ?\n1-Sim\n2-Nao\n3-Só quero jogos com coop\n"), A = X.
 historia(A) :-
-    pergunte(historia, X, "Você se importa com historia no jogo em que está jogando ?\n1-sim\n2-nao\n3- Só quero jogos com foco/boa historia\n"), A = X.
+    pergunte(historia, X, "Você se importa com historia no jogo em que está jogando ?\n1-Sim\n2-Nao\n3- Só quero jogos com foco/boa historia\n"), A = X.
 tempo(A) :-
-    pergunte(tempo, X, "Gosta de jogatinas mais longas ou curtas ?\n1-longa\n2-curta\n3-Os dois\n"), A = X.
+    pergunte(tempo, X, "Gosta de jogatinas mais longas ou curtas ?\n1-Longa\n2-Curta\n3-Os dois\n"), A = X.
 graficos(A) :-
     pergunte(graficos, X, "Prefere que tipos de graficos, 2D ou 3D ?\n1-2D\n2-3D\n3-Os dois\n"), A = X.
 desafio(A) :-
-    pergunte(desafio, X, "Gosta de desafio ?\n1-sim\n2-nao\n3-Só quero jogos que sejam desafiadores\n"), A = X.
+    pergunte(desafio, X, "Gosta de desafio ?\n1-Sim\n2-Nao\n3-Só quero jogos que sejam desafiadores\n"), A = X.
 criativo(A) :-
-    pergunte(criativo, X, "Você é uma pessoa criativa ?\n1-sim\n2-nao\n3- Só quero jogos que estimulem minha criatividade\n"), A = X.
+    pergunte(criativo, X, "Você é uma pessoa criativa ?\n1-Sim\n2-Nao\n3- Só quero jogos que estimulem minha criatividade\n"), A = X.
 family(A) :-
     pergunte(family, X, "Você deseja jogos com temas pesados, ou jogos para familia ?\n1-Familiar\n2-Tanto faz\n"), A = X.
 portatil(A) :-
     pergunte(portatil, X, "Você deseja poder jogar de forma portatil(celular ou portateis) ?\n1-Só jogos portateis\n2-Tanto faz\n"), A = X.
 esportes(A) :-
-    pergunte(esportes, X, "Você gosta de esportes ?\n1-Sim\n2-nao\n3-Só quero jogos de esportes\n"), A = X.
+    pergunte(esportes, X, "Você gosta de esportes ?\n1-Sim\n2-Nao\n3-Só quero jogos de esportes\n"), A = X.
 simulador(A) :-
-    pergunte(simulador, X, "Você gosta de simluadores (jogos que simulam alguma atividade) ?\n1-sim\n2-nao\n3-Só quero jogos que são simlutadores\n"), A = X.
+    pergunte(simulador, X, "Você gosta de simluadores (jogos que simulam alguma atividade) ?\n1-Sim\n2-Nao\n3-Só quero jogos que são simlutadores\n"), A = X.
 leitura(A) :-
-    pergunte(leitura, X, "Você gosta de ler ?\n1-Sim\n2-Não\n3-Sim e gostaria que os jogos recomendados tivesse bastante leitura\n"), A = X.
+    pergunte(leitura, X, "Você gosta de ler ?\n1-Sim\n2-Nao\n3-Sim e gostaria que os jogos recomendados tivesse bastante leitura\n"), A = X.
 tipo(A) :-
     pergunte(tipo, X, "Você gostaria de jogos focados em suas habilidades motoras e reflexos, e/ou jogos que desafiem/estimulem sua mente/raciocinio ?\n1-Reflexos\n2-Raciocinio\n3-Ambos\n"), A = X.
 
