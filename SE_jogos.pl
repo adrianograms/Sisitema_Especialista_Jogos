@@ -12,41 +12,68 @@ jogo("Yoshi Island",A,B) :-
 jogo("Mortal Kombat",A,B) :-
     (coop(1); coop(3)), family(2),listIni("Mortal Kombat",A,B).
 jogo("Hollow Night", A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
 jogo("Dark Souls", A, B) :-
-    temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
+    temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Dark Souls",A,B).
 jogo("Starbound", A, B) :-
-    temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
+    temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Starbound",A,B).
 jogo("Stardew Valley", A, B) :-
-    temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
+    temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("ind"),
     eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Stardew Valley",A,B).
 jogo("Bastion", A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"),
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Bastion",A,B).
 jogo("Broforce", A, B) :-
-    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Broforce",A,B).
 jogo("Fable", A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("motor"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Fable",A,B).
 jogo("Full Mojo Rampage", A, B) :-
-    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"),
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Full Mojo Rampage",A,B).
 jogo("Furi", A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("3d"),
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Furi",A,B).
 jogo("Gauntlet", A, B) :-
-    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Gauntlet",A,B).
 jogo("GIBZ", A, B) :-
-    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("GIBZ",A,B).
 jogo("Gunpoint", A, B) :-
-     temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"),
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Gunpoint",A,B).
+jogo("The Room", A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("The Room",A,B).
+jogo("Scribblenauts Unlimited", A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Scribblenauts Unlimited",A,B).
+jogo("Shantae and the Pirate's Curse", A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Shantae and the Pirate's Curse",A,B).
+jogo("Shelter 1", A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Shelter 1",A,B).
+jogo("Tales of Berseria", A, B) :-
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Tales of Berseria",A,B).
+jogo("Trine 2", A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Trine 2",A,B).
+jogo("FEZ", A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("FEZ",A,B).
+jogo("The Witness", A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("The Witness",A,B).
+jogo("Age of Empires 2", A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Age of Empires 2",A,B).
 
 jogo("Final Fantasy XII", A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
@@ -94,10 +121,8 @@ temCoop("nao") :-
 temCoop("exclusivo") :-
     coop(1) ; coop(3). % Possui coop, e ele é excluisivamente coop ou a graça do jogo é jogar com os amigos
 
-temHistoria("sim","nao") :-
-    temLeitura("nao"). % Possui historia, mas você pode ignorar, e não tem muita leitura
-temHistoria("sim","sim") :-
-    temLeitura("sim"). % Possui historia, mas você pode ignorar, e tem consideravel leitura, porem voce pode ignorar tambem
+temHistoria("sim") :-
+    !. % Possui historia, mas você pode ignorar, e não tem muita leitura
 temHistoria("nao") :-
     historia(1); historia(2). % Não possui historia, ou a qualidade da mesma é ruim
 temHistoria("central") :-

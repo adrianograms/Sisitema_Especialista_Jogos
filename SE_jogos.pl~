@@ -83,6 +83,9 @@ jogo("Cuphead", A, B) :-
 jogo(X,A,B) :-
     B = A,!.
 
+% ------------------------------------------------------------------
+% Regras de negocio, interface das perguntas com o jogo
+% ------------------------------------------------------------------
 
 temCoop("sim") :-
     !. % Possui coop mas não é requisito, o jogo pode ser jogado sozinho
@@ -91,10 +94,8 @@ temCoop("nao") :-
 temCoop("exclusivo") :-
     coop(1) ; coop(3). % Possui coop, e ele é excluisivamente coop ou a graça do jogo é jogar com os amigos
 
-temHistoria("sim","nao") :-
-    temLeitura("nao"). % Possui historia, mas você pode ignorar, e não tem muita leitura
-temHistoria("sim","sim") :-
-    temLeitura("sim"). % Possui historia, mas você pode ignorar, e tem consideravel leitura, porem voce pode ignorar tambem
+temHistoria("sim") :-
+    !. % Possui historia, mas você pode ignorar, e não tem muita leitura
 temHistoria("nao") :-
     historia(1); historia(2). % Não possui historia, ou a qualidade da mesma é ruim
 temHistoria("central") :-
@@ -141,16 +142,18 @@ eSimulador("nao") :-
     simulador(1); simulador(2).
 
 temLeitura("sim") :-
-    !.
+    !. % Tem leitura, mas pode ser ignorada
 temLeitura("nao") :-
-    leitura(1); leitura(2).
+    leitura(1); leitura(2). % Não tem leitura mesmo tendo historia
 temLeitura("crucial") :-
-    leitura(1); leitura(3).
+    leitura(1); leitura(3). % Leitura é crucial para o entendimento/divertimento do jogador
 
 tipoJogo("motor") :-
-    tipo(1); tipo(3).
+    tipo(1); tipo(3). % Jogos de reflexos
 tipoJogo("raciocinio") :-
-    tipo(2); tipo(3).
+    tipo(2); tipo(3). % Jogos de raciocinio
+tipoJogo("ind") :-
+    !. % Jogos ind(indefinidos) são jogos dificeis de categorizar e que seram recomendados para todos
 
 % ------------------------------------------------------------------
 % Regras de interação com o Usuário - Alto nível
