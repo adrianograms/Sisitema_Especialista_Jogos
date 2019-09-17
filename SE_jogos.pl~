@@ -79,6 +79,10 @@ jogo(23, A, B) :-
 jogo(24, A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("ind"),
     eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Car Mechanic Simulator 2015",A,B).
+jogo(25, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("sim"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Skate 3",A,B).
+
 
 jogo("Final Fantasy XII", A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
