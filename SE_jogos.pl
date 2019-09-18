@@ -18,7 +18,7 @@ jogo(3, A, B) :-
     eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Starbound",A,B).
 jogo(4, A, B) :-
     temCoop("sim"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("ind"),
-    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Stardew Valley",A,B).
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("sim"),eFamily("sim"),listIni("Stardew Valley",A,B).
 jogo(5, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Bastion",A,B).
@@ -45,7 +45,7 @@ jogo(12, A, B) :-
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Gunpoint",A,B).
 jogo(13, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("raciocinio"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("The Room",A,B).
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("The Room",A,B).
 jogo(14, A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
     eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Scribblenauts Unlimited",A,B).
@@ -111,7 +111,7 @@ jogo(34, A, B) :-
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Enter the Gungeon",A,B).
 jogo(35, A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
-    eDificil("sim"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("The Escapists",A,B).
+    eDificil("sim"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("sim"),eFamily("nao"),listIni("The Escapists",A,B).
 jogo(36, A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Euro Truck Simulator 2",A,B).
@@ -123,10 +123,77 @@ jogo(38, A, B) :-
     eDificil("sim"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("The Forest",A,B).
 jogo(39, A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("ind"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Game Dev Tycoon",A,B).
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("sim"),eFamily("sim"),listIni("Game Dev Tycoon",A,B).
 jogo(40, A, B) :-
-    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("ind"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Game Dev Tycoon",A,B).
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("nao"),listIni("Grand Theft Auto: San Andreas",A,B).
+jogo(41, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Guacamelee",A,B).
+jogo(42, A, B) :-
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Fairy Fencer F",A,B).
+jogo(43, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Kingdoms of Amalur: Reckoning",A,B).
+jogo(44, A, B) :-
+    temCoop("exclusivo"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Lost Castle",A,B).
+jogo(45, A, B) :-
+    temCoop("exclusivo"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Magicite",A,B).
+jogo(46, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Mark of the Ninja",A,B).
+jogo(47, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("RimWorld",A,B).
+jogo(48, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("The Sims 3",A,B).
+jogo(49, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("sim"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Spore",A,B).
+jogo(50, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Terraria",A,B).
+jogo(51, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("sim"),eFamily("nao"),listIni("Fallou Shelter",A,B).
+jogo(52, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Crossy Road",A,B).
+jogo(53, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("sim"),eFamily("nao"),listIni("Plague Inc.",A,B).
+jogo(54, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Sonic.",A,B).
+jogo(55, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Scribblenauts Remix",A,B).
+jogo(56, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Brifge Constructor Portal",A,B).
+jogo(57, A, B) :-
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("nao"),listIni("Thimbleweed Park",A,B).
+jogo(58, A, B) :-
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("nao"),listIni("Final Fantasy IX",A,B).
+jogo(59, A, B) :-
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("nao"),listIni("Reigns: Her Majesty",A,B).
+jogo(60, A, B) :-
+    temCoop("exclusivo"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("sim"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Golf With Your Friends",A,B).
+jogo(61, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("sim"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Ultimate Fishing Simulator",A,B).
+jogo(62, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("sim"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Ultimate Fishing Simulator",A,B).
+
 
 
 jogo(101, A, B) :-
