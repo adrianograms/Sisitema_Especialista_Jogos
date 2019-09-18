@@ -129,36 +129,81 @@ jogo(40, A, B) :-
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Game Dev Tycoon",A,B).
 
 
-jogo("Final Fantasy XII", A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
+jogo(101, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),tipoJogo("raciocinio"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Final Fantasy XII",A,B).
-jogo("The Binding of Isaac", A, B) :-
-    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+jogo(102, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"),tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("The Binding of Isaac",A,B).
-jogo("BattleBlock Theater", A, B) :-
-    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+jogo(103, A, B) :-
+    temCoop("sim"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"),tipoJogo("ind"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("BattleBlock Theater",A,B).
-jogo("Risk of Rain", A, B) :-
-    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+jogo(104, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Risk of Rain",A,B).
-jogo("Skullgirls", A, B) :-
-    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+jogo(105, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Skullgirls",A,B).
-jogo("Half-Life", A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),
+jogo(106, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("3d"),tipoJogo("ind"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Half-Life",A,B).
-jogo("Pokemon Emerald", A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),
+jogo(107, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),tipoJogo("ind"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Pokemon Emerald",A,B).
-jogo("Doki Doki Literature Club", A, B) :-
-    temCoop("nao"),temHistoria("central"),tempoJogatina("longa"),tipoGraficos("2d"),
+jogo(108, A, B) :-
+    temCoop("nao"),temHistoria("central"),tempoJogatina("longa"),tipoGraficos("2d"),tipoJogo("ind"),temLeitura("crucial"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Doki Doki Literature Club",A,B).
-jogo("Megaman X2", A, B) :-
-    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+jogo(109, A, B) :-
+    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Megaman X2",A,B).
-jogo("Cuphead", A, B) :-
-    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),
+jogo(110, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Cuphead",A,B).
+jogo(111, A, B) :-
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Batman: Arkham Asylum",A,B).
+jogo(112, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("sim"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("FIFA 20",A,B).
+jogo(113, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("sim"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("PES 2020",A,B).
+jogo(114, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("sim"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("NBA 2K20",A,B).
+jogo(115, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("sim"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("NHL 20",A,B).
+jogo(116, A, B) :-
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Far Cry 3",A,B).
+jogo(117, A, B) :-
+    temCoop("sim"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),temLeitura("crucial"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Beyond Two Souls",A,B).
+jogo(118, A, B) :-
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("ind"),temLeitura("crucial"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Fate/stay night",A,B).
+jogo(119, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+jogo(120, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+jogo(121, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+jogo(122, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+jogo(123, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+jogo(124, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+jogo(125, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
 
 
 jogo(X,A,B) :-
