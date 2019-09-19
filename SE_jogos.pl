@@ -1,4 +1,4 @@
-main :- nl, write('Sistema Especialista em recomendação de jogos para leigos.'), nl,
+main :- nl, write('Sistema Especialista de recomendação de jogos para leigos.'), nl,
     retractall(fato(_, _)),     % limpa a memória de trabalho.
     jogos(A),
     write('As recomendações de jogos são: '),
@@ -190,9 +190,7 @@ jogo(60, A, B) :-
 jogo(61, A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("sim"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Ultimate Fishing Simulator",A,B).
-jogo(62, A, B) :-
-    temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("motor"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("sim"),eSimulador("sim"),ePortatil("nao"),eFamily("sim"),listIni("Ultimate Fishing Simulator",A,B).
+
 
 
 
@@ -218,7 +216,7 @@ jogo(107, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),tipoJogo("ind"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Pokemon Emerald",A,B).
 jogo(108, A, B) :-
-    temCoop("nao"),temHistoria("central"),tempoJogatina("longa"),tipoGraficos("2d"),tipoJogo("ind"),temLeitura("crucial"),
+    temCoop("nao"),temHistoria("central"),tempoJogatina("longa"),tipoGraficos("2d"),tipoJogo("ind"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Doki Doki Literature Club",A,B).
 jogo(109, A, B) :-
     temCoop("nao"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"),tipoJogo("motor"),
@@ -245,39 +243,71 @@ jogo(116, A, B) :-
     temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Far Cry 3",A,B).
 jogo(117, A, B) :-
-    temCoop("sim"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),temLeitura("crucial"),
+    temCoop("sim"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("nao"),listIni("Beyond Two Souls",A,B).
 jogo(118, A, B) :-
-    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("ind"),temLeitura("crucial"),
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("ind"),
     eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Fate/stay night",A,B).
 jogo(119, A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Persona 5",A,B).
 jogo(120, A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Fate/hollow ataraxia",A,B).
 jogo(121, A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("nao"),listIni("Fate/Extra",A,B).
 jogo(122, A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("ind"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Secret of Mana",A,B).
 jogo(123, A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Chrono Trigger",A,B).
 jogo(124, A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"),tipoJogo("ind"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Pokemon Leaf Green",A,B).
 jogo(125, A, B) :-
-    temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
-    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night",A,B).
-
+    temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("The Legend of Zelda: The Minish Cap",A,B).
+jogo(126, A, B) :-
+      temCoop("nao"),temHistoria("crucial"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("The Legend of Zelda: A Link to the Pastt",A,B).
+jogo(127, A, B) :-
+    temCoop("exclusivo"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("raciocinio"),
+    eDificil("nao"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("The Legend of Zelda: Four Swords Adventures",A,B).
+jogo(128, A, B) :-
+    temCoop("exclusivo"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Ultimate Chicken Horse",A,B).
+jogo(129, A, B) :-
+    temCoop("nao"),temHistoria("sim"),tempoJogatina("curta"),tipoGraficos("2d"), tipoJogo("motor"),
+    eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Limbo",A,B).
+jogo(130, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Minecraft: Java Edition",A,B).
+jogo(131, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("sim"),eFamily("sim"),listIni("Minecraft: Bedrock Edition",A,B).
+jogo(132, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("longa"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Minecraft: Java Edition",A,B).
+jogo(133, A, B) :-
+    temCoop("sim"),temHistoria("nao"),tempoJogatina("curta"),tipoGraficos("3d"), tipoJogo("ind"),
+    eDificil("nao"), eCriativo("sim"),eDeEsportes("nao"),eSimulador("sim"),ePortatil("nao"),eFamily("nao"),listIni("Gmod",A,B).
+	
 
 jogo(X,A,B) :-
     B = A,!.
 
 jogos(A) :- jogo(1, [], B), jogo(2, B, C), jogo(3, C, D), jogo(4, D, E),
-    jogo(5, E, F), jogo(6, F, G), jogo(7, G, H), jogo(8, H, A).
+    jogo(5, E, F), jogo(6, F, G), jogo(7, G, H), jogo(8, H, I), jogo(9,I,J), jogo(10,J,K), jogo(11,K,L), jogo(12,L,M), jogo(13,M,N), jogo(14,N,O), jogo(15,O,P), jogo(16,P,Q), 
+	jogo(17,Q,R), jogo(18,R,S), jogo(19,S,T), jogo(20,T,U), jogo(21,U,V), jogo(22,V,W), jogo(23,W,X), jogo(24,X,Y), jogo(25,Y,Z), jogo(26,Z,A1), jogo(27,A1,B1), jogo(28,B1,C1),
+	jogo(29,C1,D1), jogo(30,D1,E1), jogo(31,E1,F1), jogo(32,F1,G1), jogo(33,G1,H1), jogo(34,H1,I1), jogo(35,I1,J1), jogo(36,J1,K1), jogo(37,K1,L1), jogo(38,L1,M1), jogo(39,M1,N1),
+	jogo(40,N1,O1), jogo(41,O1,P1), jogo(42,P1,Q1), jogo(43,Q1,R1), jogo(44,R1,S1), jogo(45,S1,T1), jogo(46,T1,U1), jogo(47,U1,V1), jogo(48,V1,W1), jogo(49,W1,X1), jogo(50,X1,Y1), 
+	jogo(51,Y1,Z1), jogo(52,Z1,A2), jogo(53,A2,B2), jogo(54,B2,C2), jogo(55,C2,D2), jogo(56,D2,E2), jogo(57,E2,F2), jogo(58,F2,G2), jogo(59,G2,H2), jogo(60,H2,I2), jogo(61,I2,J2),
+	jogo(100,J2,K2), jogo(101,K2,L2), jogo(102,L2,M2), jogo(103,M2,N2), jogo(104,N2,O2), jogo(105,O2,P2), jogo(106,P2,Q2), jogo(107,Q2,R2), jogo(108,R2,S2), jogo(109,S2,T2), 
+	jogo(110,T2,U2), jogo(111,U2,V2), jogo(112,V2,W2), jogo(113,W2,X2), jogo(114,X2,Y2), jogo(115,Y2,Z2), jogo(116,Z2,A3), jogo(117,A3,B3), jogo(118,B3,C3), jogo(119,C3,D3),
+	jogo(120,D3,E3), jogo(121,E3,F3), jogo(122,F3,G3), jogo(123,G3,H3), jogo(124,H3,I3), jogo(125,I3,J3), jogo(126,J3,L3), jogo(127,L3,M3), jogo(128,M3,N3), jogo(129,N3,O3), 
+	jogo(130,O3,P3), jogo(131,P3,Q3), jogo(132,Q3,R3), jogo(133,R3,A).
 
 
 % ------------------------------------------------------------------
