@@ -322,7 +322,7 @@ jogos(A) :- jogo(1, [], B), jogo(2, B, C), jogo(3, C, D), jogo(4, D, E),
 % Regras de negocio, interface das perguntas com o jogo
 % ------------------------------------------------------------------
 
-% Pergunta se tem
+% Jogo tem ou não tem coop, e se tiver, se é exclusivo
 temCoop("sim") :-
     !. % Possui coop mas não é requisito, o jogo pode ser jogado sozinho
 temCoop("nao") :-
@@ -330,7 +330,7 @@ temCoop("nao") :-
 temCoop("exclusivo") :-
     coop(1) ; coop(3). % Possui coop, e ele é excluisivamente coop ou a graça do jogo é jogar com os amigos
 
-% Pergunta se tem historia
+% Jogo tem ou não historia,e se tem, se ela é central
 temHistoria("sim") :-
     !. % Possui historia, mas você pode ignorar, e não tem muita leitura
 temHistoria("nao") :-
@@ -338,49 +338,49 @@ temHistoria("nao") :-
 temHistoria("central") :-
     (historia(1); historia(3)),temLeitura("crucial"). % Possui historia, e ela é muito importante para a graça do jogo
 
-% Pergunta o tempo a ser investido por partida
+% Jogo tem jogatina longa ou curta
 tempoJogatina("longa") :-
     tempo(1); tempo(3).
 tempoJogatina("curta") :-
     tempo(2); tempo(3).
 
-% Pergunta o tipo dos graficos
+% Jogo tem graficos 2d ou 3d
 tipoGraficos("2d") :-
     graficos(1); graficos(3).
 tipoGraficos("3d") :-
     graficos(2); graficos(3).
 
-% Pergunta se é dificil
+% Jogo é ou não é dificil
 eDificil("sim") :-
     desafio(1); desafio(3).
 eDificil("nao") :-
     desafio(1); desafio(2).
 
-% Pergunta se é criativo
+% Jogo permite voce ser criativo
 eCriativo("sim") :-
     criativo(1) ; criativo(3).
 eCriativo("nao") :-
     criativo(1) ; criativo(2).
 
-% Pergunta se é familiar
+% Jogo é para toda familia ou não
 eFamily("sim") :-
     !.
 eFamily("nao") :-
     family(2).
 
-% Pergunta se é portatil
+% Jogo é ou não portatil
 ePortatil("sim") :-
     !.
 ePortatil("nao") :-
     portatil(2).
 
-% Pergunta se o jogo é de esportes ou não
+% Jogo é ou não de esportes
 eDeEsportes("sim") :-
     esportes(1); esportes(3).
 eDeEsportes("nao") :-
     esportes(1); esportes(2).
 
-% Essa pergunta se o jogo é ou não um simulador
+% Jogo é ou não um simulador
 eSimulador("sim") :-
     simulador(1); simulador(3).
 eSimulador("nao") :-
@@ -408,7 +408,7 @@ coop(A) :-
 historia(A) :-
     pergunte(historia, X, "Você deseja jogos com uma boa historia e/ou com foco na historia ?\n1-Sim\n2-Nao\n3- Só quero jogos com foco/boa historia\n"), A = X.
 tempo(A) :-
-    pergunte(tempo, X, "Gostaria de jogatinas mais longas(sessões maiores, onde você se investe mais no jogo ao qual está jogando) ou curtas (partidas rapidas descompromissadas) ?\n1-Longa\n2-Curta\n3-Os dois\n"), A = X.
+    pergunte(tempo, X, "Gostaria de jogos com jogatinas mais longas(sessões maiores, onde você se investe mais no jogo ao qual está jogando) ou curtas (partidas rapidas descompromissadas) ?\n1-Longa\n2-Curta\n3-Os dois\n"), A = X.
 graficos(A) :-
     pergunte(graficos, X, "Prefere que tipos de graficos, 2D ou 3D ?\n1-2D\n2-3D\n3-Os dois\n"), A = X.
 desafio(A) :-

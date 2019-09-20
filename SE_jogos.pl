@@ -11,8 +11,8 @@ main :- nl, write('Sistema Especialista de recomendação de jogos para leigos.\n'
 % ------------------------------------------------------------------
 
 % Essa lista possui todos os jogos, aos quais tem suas caracteristicas
-% especificas as quais, se conincidirem com as preferencias do jogador
-% seram adicionados na lista de todos os jogos
+% especificas as quais, se conincidirem com as preferencias do jogador,
+% seram adicionados na lista de todos os jogos recomendados
 jogo(1, A, B) :-
     temCoop("nao"),temHistoria("sim"),tempoJogatina("longa"),tipoGraficos("2d"), tipoJogo("motor"),
     eDificil("sim"), eCriativo("nao"),eDeEsportes("nao"),eSimulador("nao"),ePortatil("nao"),eFamily("sim"),listIni("Hollow Night\n",A,B).
@@ -320,6 +320,9 @@ jogos(A) :- jogo(1, [], B), jogo(2, B, C), jogo(3, C, D), jogo(4, D, E),
 
 % ------------------------------------------------------------------
 % Regras de negocio, interface das perguntas com o jogo
+%
+% Essas regras, servem para fazer a interface dos jogos com as
+% perguntas(Regras de interação com o usuario - Alto nivel)
 % ------------------------------------------------------------------
 
 % Jogo tem ou não tem coop, e se tiver, se é exclusivo
